@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+         <!-- XML Schema Generated from XML Document on Wed Oct 17 2018 11:24:01 GMT+0800 (台北標準時間) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="cwbdata">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element type="xs:string" name="identifier"></xs:element>
+                           <xs:element type="xs:string" name="datasetID"></xs:element>
+                           <xs:element type="xs:string" name="datasetName"></xs:element>
+                           <xs:element type="xs:string" name="dataItemID"></xs:element>
+                           <xs:element type="xs:string" name="sender"></xs:element>
+                           <xs:element type="xs:dateTime" name="sent"></xs:element>
+                           <xs:element type="xs:string" name="status"></xs:element>
+                           <xs:element type="xs:string" name="scope"></xs:element>
+                           <xs:element type="xs:string" name="msgType"></xs:element>
+                           <xs:element type="xs:string" name="publisherOID"></xs:element>
+                           <xs:element name="resources">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="resource">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="metadata">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element type="xs:string" name="resourceID"></xs:element>
+                                                                                 <xs:element type="xs:string" name="resourceName"></xs:element>
+                                                                                 <xs:element type="xs:string" name="resourceDescription"></xs:element>
+                                                                                 <xs:element type="xs:string" name="language"></xs:element>
+                                                                                 <xs:element type="xs:string" name="homepage"></xs:element>
+                                                                                 <xs:element name="sources">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="source" maxOccurs="unbounded">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element type="xs:string" name="title"></xs:element>
+                                                                                                                     <xs:element type="xs:string" name="path"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                                 <xs:element name="temporal">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element type="xs:string" name="startTime"></xs:element>
+                                                                                                   <xs:element type="xs:string" name="endTime"></xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                                 <xs:element name="spatial">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element type="xs:string" name="description"></xs:element>
+                                                                                                   <xs:element name="coordinateReferenceSystem">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element type="xs:string" name="EPSGCode"></xs:element>
+                                                                                                                     <xs:element type="xs:string" name="name"></xs:element>
+                                                                                                                     <xs:element type="xs:string" name="datum"></xs:element>
+                                                                                                                     <xs:element type="xs:string" name="coordinateFormat"></xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                                 <xs:element name="weatherElements">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="weatherElement" maxOccurs="unbounded">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element type="xs:string" name="tagName"></xs:element>
+                                                                                                                     <xs:element type="xs:string" name="description"></xs:element>
+                                                                                                                     <xs:element type="xs:string" name="units" minOccurs="0"></xs:element>
+                                                                                                                     <xs:element type="xs:string" name="format" minOccurs="0"></xs:element>
+                                                                                                                     <xs:element name="specialValues">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="specialValue" maxOccurs="unbounded">
+                                                                                                                                             <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                         <xs:element type="xs:string" name="value"></xs:element>
+                                                                                                                                                         <xs:element type="xs:string" name="description"></xs:element>
+                                                                                                                                                   </xs:sequence>
+                                                                                                                                             </xs:complexType>
+                                                                                                                                       </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                                 <xs:element name="statistics">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="statisticalPeriods">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="statisticalPeriod" maxOccurs="unbounded">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element type="xs:string" name="periodTagName"></xs:element>
+                                                                                                                                       <xs:element type="xs:string" name="description"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>                                                                                                                 
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+																								   <xs:element name="weatherElement">
+																										<xs:complexType>
+																											<xs:sequence>
+																											   <xs:element type="xs:string" name="tagName"></xs:element>
+																											   <xs:element type="xs:string" name="description"></xs:element>
+																											   <xs:element type="xs:string" name="units"></xs:element>
+																											   <xs:element name="statisticalMethods">
+																													<xs:complexType>
+																														   <xs:sequence>
+																																 <xs:element name="statisticalMethod" maxOccurs="unbounded">
+																																	   <xs:complexType>
+																																			 <xs:sequence>
+																																				   <xs:element type="xs:string" name="methodTagName"></xs:element>
+																																				   <xs:element type="xs:string" name="description"></xs:element>
+																																			 </xs:sequence>
+																																	   </xs:complexType>
+																																 </xs:element>
+																														   </xs:sequence>
+																													 </xs:complexType>
+																											   </xs:element>
+																										 </xs:sequence>
+																								   </xs:complexType>
+																								</xs:element>
+                                                                                             </xs:sequence>                                                                                             
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="data">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="surfaceObs">
+                                                                                       <xs:complexType>
+                                                                                             <xs:sequence>
+                                                                                                   <xs:element name="location" maxOccurs="unbounded">
+                                                                                                         <xs:complexType>
+                                                                                                               <xs:sequence>
+                                                                                                                     <xs:element name="station">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element type="xs:string" name="stationID"></xs:element>
+                                                                                                                                       <xs:element type="xs:string" name="stationName"></xs:element>
+                                                                                                                                       <xs:element type="xs:string" name="stationNameEN"></xs:element>
+                                                                                                                                       <xs:element type="xs:string" name="stationAttribute"></xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                                     <xs:element name="stationObsTimes">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="stationObsTime" maxOccurs="unbounded">
+                                                                                                                                             <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                         <xs:element type="xs:string" name="dataTime"></xs:element>
+                                                                                                                                                         <xs:element name="weatherElements">
+                                                                                                                                                               <xs:complexType>
+                                                                                                                                                                     <xs:sequence>
+                                                                                                                                                                           <xs:element type="xs:string" name="stationPressure"></xs:element>
+                                                                                                                                                                           <xs:element type="xs:string" name="temperature"></xs:element>
+                                                                                                                                                                           <xs:element type="xs:string" name="relativeHumidity"></xs:element>
+                                                                                                                                                                           <xs:element type="xs:string" name="windSpeed"></xs:element>
+                                                                                                                                                                           <xs:element type="xs:string" name="windDirectionDescription"></xs:element>
+                                                                                                                                                                           <xs:element type="xs:string" name="precipitation"></xs:element>
+                                                                                                                                                                           <xs:element type="xs:string" name="sunshineDuration"></xs:element>
+                                                                                                                                                                     </xs:sequence>
+                                                                                                                                                               </xs:complexType>
+                                                                                                                                                         </xs:element>
+                                                                                                                                                   </xs:sequence>
+                                                                                                                                             </xs:complexType>
+                                                                                                                                       </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                                     <xs:element name="stationObsStatistics">
+                                                                                                                           <xs:complexType>
+                                                                                                                                 <xs:sequence>
+                                                                                                                                       <xs:element name="temperature">
+                                                                                                                                             <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                         <xs:element name="daily" maxOccurs="unbounded">
+                                                                                                                                                               <xs:complexType>
+                                                                                                                                                                     <xs:sequence>
+                                                                                                                                                                     	   <xs:element type="xs:date" name="dataDate"></xs:element>
+                                                                                                                                                                           <xs:element type="xs:string" name="maximum"></xs:element>
+                                                                                                                                                                           <xs:element type="xs:string" name="minimum"></xs:element>
+                                                                                                                                                                           <xs:element type="xs:string" name="mean"></xs:element>
+                                                                                                                                                                     </xs:sequence>
+                                                                                                                                                               </xs:complexType>
+                                                                                                                                                         </xs:element>
+                                                                                                                                                   </xs:sequence>
+                                                                                                                                             </xs:complexType>
+                                                                                                                                       </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                           </xs:complexType>
+                                                                                                                     </xs:element>
+                                                                                                               </xs:sequence>
+                                                                                                         </xs:complexType>
+                                                                                                   </xs:element>
+                                                                                             </xs:sequence>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>

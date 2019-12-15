@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="cwbdata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="identifier" type="xs:string" />
+        <xs:element name="datasetID" type="xs:string" />
+        <xs:element name="datasetName" type="xs:string" />
+        <xs:element name="dataItemID" type="xs:string" />
+        <xs:element name="sender" type="xs:string" />
+        <xs:element name="sent" type="xs:dateTime" />
+        <xs:element name="status" type="xs:string" />
+        <xs:element name="scope" type="xs:string" />
+        <xs:element name="msgType" type="xs:string" />
+        <xs:element name="publisherOID" type="xs:string" />
+        <xs:element name="resources">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="resource">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="metadata">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="resourceID" type="xs:string" />
+                          <xs:element name="resourceName" type="xs:string" />
+                          <xs:element name="resourceDescription" type="xs:string" />
+                          <xs:element name="language" type="xs:string" />
+                          <xs:element name="homepage" type="xs:string" />
+                          <xs:element name="sources">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element maxOccurs="unbounded" name="source">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="title" type="xs:string" />
+                                      <xs:element name="path" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="temporal">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="startTime" type="xs:dateTime" />
+                                <xs:element name="endTime" type="xs:dateTime" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="spatial">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="description" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="weatherElements">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element maxOccurs="unbounded" name="weatherElement">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="tagName" type="xs:string" />
+                                      <xs:element name="description" type="xs:string" />
+                                      <xs:element minOccurs="0" name="units" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="specialValues">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element maxOccurs="unbounded" name="specialValue">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="value" type="xs:string" />
+                                            <xs:element name="description" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="data">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="surfaceObs">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element maxOccurs="unbounded" name="location">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="station">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="stationID" type="xs:string" />
+                                            <xs:element name="stationName" type="xs:string" />
+                                            <xs:element name="stationNameEN" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="stationObsTimes">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element maxOccurs="unbounded" name="stationObsTime">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="dataTime" type="xs:string" />
+                                                  <xs:element name="weatherElements">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element name="stationPressure" type="xs:string" />
+                                                        <xs:element name="seaLevelPressure" type="xs:string" />
+                                                        <xs:element name="temperature" type="xs:string" />
+                                                        <xs:element name="dewPointTemperature" type="xs:string" />
+                                                        <xs:element name="relativeHumidity" type="xs:string" />
+                                                        <xs:element name="windSpeed" type="xs:string" />
+                                                        <xs:element name="windDirection" type="xs:string" />
+                                                        <xs:element name="gustSpeed" type="xs:string" />
+                                                        <xs:element name="gustDirection" type="xs:string" />
+                                                        <xs:element name="precipitation" type="xs:string" />
+                                                        <xs:element name="precipitationDuration" type="xs:string" />
+                                                        <xs:element name="sunshineDuration" type="xs:string" />
+                                                        <xs:element name="globalSolarRadiation" type="xs:string" />
+                                                        <xs:element name="visibility" type="xs:string" />
+                                                        <xs:element name="UVIndex" type="xs:string" />
+                                                        <xs:element name="cloudAmount" type="xs:string" />
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
